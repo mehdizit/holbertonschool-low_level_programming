@@ -1,2 +1,2 @@
 #!/var/bash
-gcc -o $CFILE
+gcc -c $CFILE
