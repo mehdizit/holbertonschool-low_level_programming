@@ -19,5 +19,4 @@ printf("size of a long:%i\n", sizeof(longtype));
 printf("size of a char:%i\n", sizeof(chartype));
 printf("size of a long int:%i\n", sizeof(longinttype));
 return (0);
-
 }
