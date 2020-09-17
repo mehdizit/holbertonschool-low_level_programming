@@ -12,12 +12,12 @@ char upper= 'A';
 while (lower < = 'z')
 {
 putchar(lower);
-lower++
+lower++;
 }
 while (upper < = 'Z')
 {
 putchar(upper)
-upper++
+upper++;
 }
 putchar('\n');
 return (0);
