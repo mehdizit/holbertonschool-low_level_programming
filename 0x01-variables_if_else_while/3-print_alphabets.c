@@ -13,13 +13,13 @@ lower='a';
 while (lower < = 'z')
 {
 putchar(lower);
-++lower;
+lower++;
 }
-upper=lower='A';
+upper='A';
 while (upper < = 'Z')
 {
 putchar(upper)
-++upper;
+upper++;
 }
 putchar('\n');
 return (0);
