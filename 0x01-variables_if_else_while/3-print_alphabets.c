@@ -7,15 +7,18 @@
  */
 int main(void)
 {
-char c;
-for (c = 'a'; c < = 'z'; c++)
+char lower= 'a';
+char upper= 'A';
+while (lower < = 'z')
 {
-putchar(c);
+putchar(lower);
+lower++
 }
-for (c = 'A'; c < = 'Z'; c++)
+while (upper < = 'Z')
 {
-putchar(c);
+putchar(upper)
+upper++
 }
-putchar ('\n');
+putchar('\n');
 return (0);
 }
