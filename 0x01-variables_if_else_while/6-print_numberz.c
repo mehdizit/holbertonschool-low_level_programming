@@ -1,17 +1,23 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
-/**
-* main - prints char number 0-9
-*
-* Return: Always 0
-*/
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int i;
-	for (i = '0'; i <= '9'; i++)
+
+	i = 48;
+	while  (i < 58)
 	{
 		putchar(i);
+		i++;
 	}
-	putchart('\n');
+	putchar('\n');
+
 	return (0);
 }
