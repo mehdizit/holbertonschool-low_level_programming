@@ -8,7 +8,7 @@
 int main(void)
 {
 char ch = 'a', 'A';
-while ('a' <= 'z' && 'A' <= 'Z')
+while (('a' <= 'z') && ('A' <= 'Z'))
 {
 for (ch = 'a'; ch <= 'z'; ch++)
 {
