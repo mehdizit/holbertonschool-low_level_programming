@@ -7,17 +7,11 @@
 
 int main(void)
 {
-char ch = 'a', 'A';
-while (('a' <= 'z') && ('A' <= 'Z'))
-{
-for (ch = 'a'; ch <= 'z'; ch++)
-{
-putchar(ch);
-}
-for (ch = 'A'; ch <= 'Z'; ch++)
-{
-putchar(ch);
-}
+char i;
+for (i = 'a'; i < = 'z'; i++)
+putchar(i);
+for (i = 'A'; i < = 'Z'; i++)
+putchar(i);
 putchar('\n');
 return (0);
 }
