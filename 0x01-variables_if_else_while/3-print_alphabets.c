@@ -7,19 +7,19 @@
  */
 int main(void)
 {
-	char lower;
+	char lower, upper;
 lower='a';
 
-while (lower < = 'z')
+while (lower <= 'z')
 {
 putchar(lower);
 lower++;
 }
-lower='A';
-while (lower < = 'Z')
+upper='A';
+while (upper <= 'Z')
 {
-putchar(lower);
-lower++;
+putchar(upper);
+upper++;
 }
 putchar('\n');
 return (0);
