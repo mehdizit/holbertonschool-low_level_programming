@@ -7,13 +7,15 @@
  */
 int main(void)
 {
-char lower= 'a';
-char upper= 'A';
+char lower, upper;
+lower='a';
+
 while (lower < = 'z')
 {
 putchar(lower);
 lower++;
 }
+upper=lower='A';
 while (upper < = 'Z')
 {
 putchar(upper)
