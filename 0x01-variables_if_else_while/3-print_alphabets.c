@@ -8,14 +8,14 @@
 int main(void)
 {
 	char lower, upper;
-lower='a';
+lower = 'a';
 
 while (lower <= 'z')
 {
 putchar(lower);
 lower++;
 }
-upper='A';
+upper = 'A';
 while (upper <= 'Z')
 {
 putchar(upper);
