@@ -11,7 +11,9 @@ int main(void)
 	int m;
 
 	for (n = 48;  n < 58; n++)
-	{	for (m = 48 ; m < 58 ; m++)
+	{
+
+		for (m = 48 ; m < 58 ; m++)
 			if (n != 48 || m != 48)
 			{
 				putchar(',');
@@ -20,8 +22,8 @@ int main(void)
 			{
 				putchar(n);
 				putchar(m);
-		       }
-	}		
+			}
+	}
 	putchar('\n');
 return (0);
 }
