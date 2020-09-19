@@ -13,10 +13,10 @@ char chartype;
 long long longlongtype;
 
 
-printf("size of an int :%i \n", sizeof(inttype));
-printf("size of a float:%i\n", sizeof(floattype));
-printf("size of a long:%i\n", sizeof(longtype));
-printf("size of a char:%i\n", sizeof(chartype));
-printf("size of a long int:%i\n", sizeof(longlongtype));
+printf("size of an int :%ld \n", sizeof(inttype));
+printf("size of a float:%ld\n", sizeof(floattype));
+printf("size of a long:%ld\n", sizeof(longtype));
+printf("size of a char:%ld\n", sizeof(chartype));
+printf("size of a long int:%ld\n", sizeof(longlongtype));
 return (0);
 }
