@@ -5,21 +5,17 @@ int main(void)
 {
 	int i, j, k;
 
-	for (i = 48; i <= 55; i++)
+	for (i = 0; i <= 7; i++)
 	{
-		for (j = 48; j <= 56; j++)
+		for (j = i + 1; j <= 8; j++)
 		{
-			for (k = 48; k <= 57; k++)
+			for (k = j + 1; k <= 9; k++)
 			{
-				if (k = 57)
-				{
-					j = j+1;
-					k = j+1;
-					putchar(i);
-					putchar(j);
-					putchar(k);
-					
-				}
+				putchar(i + '0');
+				putchar(j + '0');
+				putchar(k + '0');
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
