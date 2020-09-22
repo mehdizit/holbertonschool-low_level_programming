@@ -8,19 +8,15 @@
  *
  * Return: Always 0.
  */
-int _abs(int);
+int _abs(int n);
 {
-       
-	
-	if (n < 0)
+	if (n <=  0)
 	{
-	
-		n =( n-(2*n));
-		return (n);
+		return (n - (2 * n));
 	}
-	
+
 	else
 	{
-		return (n);   
+		return (n);
 	}
 }
