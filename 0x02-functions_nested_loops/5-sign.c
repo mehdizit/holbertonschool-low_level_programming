@@ -1,12 +1,8 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- *print_sign-check for sign of caracter.
- *
- *_islower -check for loweralphabets.
- *
+ * print_sign - check sign.
+ * @n: integer.
  * Return: Always 0.
  */
 
