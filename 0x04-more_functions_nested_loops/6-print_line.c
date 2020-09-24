@@ -1,16 +1,23 @@
 #include "holberton.h"
 /**
  * print_line - prints an underscore n times
- * @n: number of times printed
+ * @n: number of lines printed
  *
- * Return: void
+ * Return: n
  */
 
 void print_line(int n)
 {
-	for (int i = 0; i <= n; i++)
+	if (n != 0)
 	{
-		_putchar('_');
+		for (int i = 0; i < n; i++)
+		{
+			_putchar('_');
+		}
+		_putchar('\n');
 	}
-	_putchar('\n');
+	else
+	{
+		_putchar('\n');
+	}
 }
