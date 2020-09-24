@@ -1,5 +1,9 @@
 #include "holberton.h"
-
+/**
+ * more_numbers - prints 0-9\n 10 times
+ *
+ * Return: void
+ */
 void more_numbers(void)
 {
 	for (int i = 0; i <= 10; i++)
