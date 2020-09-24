@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
-*_isupper-check for upper case.
-*@c:integer
+* _isupper-check for upper case.
+* @c : integer
 * Return: Always 0 or 1.
 */
 int _isupper(int c)
