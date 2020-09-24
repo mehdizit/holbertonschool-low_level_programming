@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
- *print_numbers- display number 0 - 9.
+ *print_numbers- display number 0 - 9\n.
  *
- * Return: Always a * b.
+ * Return: Always void.
  */
 void print_numbers(void)
 {
