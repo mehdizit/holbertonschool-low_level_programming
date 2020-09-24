@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
- *isdigit - check the upper case.
+ *isdigit - check for characters.
  *
- * Return: a * b.
+ * Return: 0 or 1
  */
 int _isdigit(int c)
 {
