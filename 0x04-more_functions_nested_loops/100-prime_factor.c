@@ -24,6 +24,6 @@ int main(void)
 		i++;
 	}
 	i--;
-	printf("the largest prime factor is : %ld\n", i);
+	printf("%ld\n", i);
 	return (0);
 }
