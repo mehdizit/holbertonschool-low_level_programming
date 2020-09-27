@@ -1,4 +1,3 @@
-
 #include<stdio.h>
 /**
 *main - factor
@@ -11,8 +10,10 @@ int main(void)
 
 	n = 612852475143;
 
-	int i = 2, div = 2;
+	int i, div;
 
+	i = 2;
+	div = 2;
 	while (n != 1)
 	{
 		while (n % i == 0)
