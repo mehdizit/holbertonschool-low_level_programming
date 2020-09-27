@@ -18,7 +18,6 @@ int main(void)
 		while (n % i == 0)
 		{
 			n = n / i;
-			printf("%d * ", i);
 			if (i > div)
 			{
 				div = i;
