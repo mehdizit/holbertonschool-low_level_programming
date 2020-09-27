@@ -1,7 +1,7 @@
 
 #include<stdio.h>
 /**
-*main-enter point_check for largestprime factor of n.
+*main - factor
 *
 *Return: Always 0.
 */
