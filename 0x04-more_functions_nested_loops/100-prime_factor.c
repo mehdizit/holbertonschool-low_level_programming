@@ -6,12 +6,9 @@
 */
 int main(void)
 {
-	unsigned long n;
+	unsigned long n, i, div;
 
 	n = 612852475143;
-
-	int i, div;
-
 	i = 2;
 	div = 2;
 	while (n != 1)
@@ -27,6 +24,6 @@ int main(void)
 		i++;
 	}
 	i--;
-	printf("the largest prime factor is : %d\n", i);
+	printf("the largest prime factor is : %ld\n", i);
 	return (0);
 }
