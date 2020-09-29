@@ -1,5 +1,10 @@
 #include "holberton.h"
-
+/**
+* puts2-puts string
+*
+*@str: pointer to string
+*
+*/
 void puts2(char *str)
 {
 	int i;
