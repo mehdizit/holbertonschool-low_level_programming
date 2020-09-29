@@ -1,23 +1,23 @@
 #include "holberton.h"
-
+/**
+ *print_rev - main function
+ *
+ *@s: char.
+ *
+ */
 void print_rev(char *s)
 {
-	
-	int i;
-	char v;
 
-	for (i = 0; (*(s + i) != '\0'); i++)
+int i, j;
+
+	j = 0;
+	while (*(s + j) != '\0')
 	{
-
-            	v = *(s + i);
-
-		*(s + i) = *(s + i + 1);
-			
-                *(s + i + 1) = v;
-			
+		j++;
+	}
+	for (i = j - 1; i >= 0; i--)
+	{
 		_putchar(*(s + i));
-
-		
 	}
 	_putchar('\n');
 }
