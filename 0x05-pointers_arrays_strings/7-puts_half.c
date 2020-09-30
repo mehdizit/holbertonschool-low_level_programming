@@ -3,7 +3,7 @@
 /**
 *puts_half - check the code for Holberton School students.
 *
-*@str:char
+*@str:char pointer to string.
 *
 */
 void puts_half(char *str)
