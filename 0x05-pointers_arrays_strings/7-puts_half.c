@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
-* puts_half : puts the second half of the string.
+*puts_half - check the code for Holberton School students.
 *
-*@str: pointer to string
+*@str:char
 *
 */
 void puts_half(char *str)
