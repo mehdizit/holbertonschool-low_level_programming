@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	int i;
+	int i, pass[i];
 
 	for(i = 0; i < 12; i++)
 	{
