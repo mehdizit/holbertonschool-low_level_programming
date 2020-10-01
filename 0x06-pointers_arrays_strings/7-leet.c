@@ -1,5 +1,11 @@
 #include "holberton.h"
-
+/**
+ *leet - coding in 1337
+ *
+ *@str:string
+ *
+ * Return: char.
+ */
 char *leet(char *str)
 {
 	{
