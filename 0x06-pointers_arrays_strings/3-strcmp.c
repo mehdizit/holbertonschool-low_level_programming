@@ -1,5 +1,13 @@
 #include "holberton.h"
-
+/**
+ * _strcmp - compare two string
+ *
+ * @s1:char
+ *
+ * @s2:char
+ *
+ * Return:integer
+ */
 int _strcmp(char *s1, char *s2)
 {
 	while ((*s1 != '\0' && *s2 != '\0') && *s1 == *s2)
