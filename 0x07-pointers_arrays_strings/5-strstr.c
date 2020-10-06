@@ -7,16 +7,25 @@
  * Return: pointer to first matching substring or NULL
  */
 char *_strstr(char *haystack, char *needle)
-{
-	int i, j;
+{ unsigned int i = 0, j = 0;
 
-	for (i = 0; haystack[i] != '\0'; i++)
-	{
-		for (j = 0; needle[j] != '\0'; j++)
-		{
-			if (haystack[i + j] != needle[j])
-				break;
-		}	return (needle);
-	}
-	return (0);
+        while (haystack[i])
+        {
+                while (needle[j] && (haystack[i] == needle[0]))
+                {
+                        if (haystack[i + j] == needle[j])
+                                j++;
+                        else
+                                break;
+                }
+                if (needle[j])
+                {
+                        i++;
+                        j = 0;
+                }
+                else
+                        return (haystack + i);
+        }
+        return (0);
+
 }
