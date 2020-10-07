@@ -1,29 +1,23 @@
 #include "holberton.h"
 
+int _sqrt_recursion(int n);
+int square_root_wrapper(int guess,  int n);
 
-square_root_wrapper(int min,  int max)
+
+int square_root_wrapper(int guess, int n)
 {
-	int guess, guess_squard, n;
-	if (max < min)
+
+	if (guess * guess == n)
 	{
-		return(-1);
+		return(guess);
 	}
-	guess = (min + max )/2;
-	guess_squard = guess * guess;
-	if (guess_squard == n)
+	if (guess * guess > n)
 	{
-		return (guess);
+		return (-1);
 	}
-	else if (guess_squard < n)
-	{
-		square_root_wrapper(n, guess + 1, max);
-	}
-	else
-	{
-		square_root_wrapper(n, min, guess - 1);
-	}
-	
+	return (square_root_wrapper( guess + 1, n));
 }
+
 	
 
 int _sqrt_recursion(int n)
@@ -32,5 +26,5 @@ int _sqrt_recursion(int n)
 	{
 		return (0);
 	}
-	return (square_root_wrapper(n, min, guess - 1));
+	return (square_root_wrapper(1, n));
 }
