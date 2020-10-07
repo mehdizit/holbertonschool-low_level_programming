@@ -1,24 +1,33 @@
 #include "holberton.h"
 
-int _sqrt_recursion(int n);
-int square_root_wrapper(int guess,  int n);
-
+/**
+ *square_root_wrapper - checks for the square root of c
+ *@guess:integer
+ *@n: number to find sqrt of
+ *
+ *Return: sqrt
+ */
 
 int square_root_wrapper(int guess, int n)
 {
 
 	if (guess * guess == n)
 	{
-		return(guess);
+		return (guess);
 	}
 	if (guess * guess > n)
 	{
 		return (-1);
 	}
-	return (square_root_wrapper( guess + 1, n));
+	return (square_root_wrapper(guess + 1, n));
 }
-
-	
+/**
+ * _sqrt_recursion - returns the natural square root of a number
+ *
+ * @n: intege
+ *
+ * Return: natural square.
+ */
 
 int _sqrt_recursion(int n)
 {
