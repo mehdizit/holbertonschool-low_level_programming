@@ -1,21 +1,27 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-
+/**
+ *main - print priduct of two arguments
+ *@argc: int
+ *@argv: string
+ *
+ *Return: int.
+ */
 int main(int argc, char *argv[])
 {
-	int i, e1, e2, result;
-	i = 1;
-	if (i < argc)
+	int result, e1, e2;
+
+	if (argc != 3)
 	{
-		for(i = 1; i < argc - 1; i++)
-		{
-			e1 = atoi (*argv);
-			e2 = atoi (*(argv + 1));
-			result = (e1 * e2);
-			printf("%d\n", result);
-		}
+		printf("Error\n");
+		return (1);
 	}
-	return (result);
+	{
+		e1 = atoi(argv[1]);
+		e2 = atoi(argv[2]);
+		result = (e1 * e2);
+		printf("%d\n", result);
+	}
+	return (0);
 }
