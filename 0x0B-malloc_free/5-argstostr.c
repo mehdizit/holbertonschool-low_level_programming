@@ -38,6 +38,7 @@ char *argstostr(int ac, char **av)
 
 		ch[im++] = '\n';
 	}
+	ch[size] = '\0';
 
 
 
