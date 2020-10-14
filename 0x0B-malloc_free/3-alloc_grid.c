@@ -1,7 +1,12 @@
 #include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
-
+/**
+ ***alloc_grid - allocate space memory to 2D array and than initialize it to "0".
+ *@width: first size of array 2D
+ *@height: second size of array 2D
+ *
+ */
 int **alloc_grid(int width, int height)
 {
 	 int **ch;
@@ -21,12 +26,7 @@ int **alloc_grid(int width, int height)
 		ch[i] = (int *) malloc(sizeof(int) * width);
 		if (ch[i] == NULL)
 		{
-			for (j = 0; j < i; j++)
-			{
-				free(ch[j]);
-				free(ch);
 				return (NULL);
-			}
 		}
 		for(j = 0; j < width; j++)
 		{
