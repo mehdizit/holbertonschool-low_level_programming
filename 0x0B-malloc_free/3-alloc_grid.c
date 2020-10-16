@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- ***alloc_grid - allocate space memory to 2D array and than initialize it to "0".
+ *alloc_grid - allocate space memory to 2D array and than initialize it to "0".
  *@width: first size of array 2D
  *@height: second size of array 2D
- *
+ *Return: concatenate string s1+s2 in allocated memory.
  */
 int **alloc_grid(int width, int height)
 {
@@ -15,7 +15,6 @@ int **alloc_grid(int width, int height)
 	{
 		return (NULL);
 	}
-	
 	ch = (int **) malloc(sizeof(int *) * height);
 	if (ch == NULL)
 	{
@@ -30,13 +29,12 @@ int **alloc_grid(int width, int height)
 		ch[i] = (int *) malloc(sizeof(int) * width);
 		if (ch[i] == NULL)
 		{
-				return (NULL);
+			return (NULL);
 		}
-		for(j = 0; j < width; j++)
+		for (j = 0; j < width; j++)
 		{
 			ch[i][j] = 0;
 		}
-		
 	}
 	return (ch);
 }
