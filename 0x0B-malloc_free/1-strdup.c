@@ -1,6 +1,22 @@
 #include "holberton.h"
 #include <stdlib.h>
+/**
+ *_lenstr - count the lenght of initial string str to duplicate.
+ *@str: string to duplicate
+ *Return: lenght of string.
+ *
+ */
+int _lenstr(char *str)
+{
+	int i, len;
 
+	len = 0;
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		len++;
+	}
+	return (len);
+}
 /**
  *_strdup - return duplicate string in a new allocate memory
  *@str: string to duplicate
@@ -9,23 +25,23 @@
  */
 char *_strdup(char *str)
 {
-	unsigned int i, j;
-	char *s;
+	char *stral;
+	int size, i;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; str[i]; i++)
-	{}
-	s = malloc(sizeof(char) * i);
-	if (s == NULL)
+	size =  _lenstr(str);
+	stral = malloc(sizeof(char) * size);
+	if (stral == NULL)
 	{
 		return (NULL);
 	}
-	for (j = 0; j < i; j++)
+	for (i = 0; i < size; i++)
 	{
-		s[j] = str[j];
+		stral[i] = str[i];
 	}
-	return (s);
+	stral[i] = '\0';
+	return (stral);
 }
