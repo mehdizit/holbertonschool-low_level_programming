@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <stdlib.h>
 /**
  * init_dog - initializes a dog structure
  * @d: dog structure passed
@@ -8,7 +9,14 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	d->name = name;
-	d->age = age;
-	d->owner = owner;
+	if (d == NULL)
+	{
+		return;
+	}
+	else
+	{
+		d->name = name;
+		d->age = age;
+		d->owner = owner;
+	}
 }
