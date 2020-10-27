@@ -12,7 +12,7 @@ int _printf(const char *format, ...);
 
 
 
-typedef struct print
+typedef struct m
 {
 	char *t;
 	void (*f)(va_list);
