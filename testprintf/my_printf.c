@@ -23,20 +23,26 @@ int _printf(const char *format, ...)
 		else if (format [i] == '%' && format[i + 1] != '%')
 		{
 			int j;
-			print_t array[] = {
+			print_t m[] = {
 				{"c", print_c},
 				{"d", print_dec},
 				{"i", print_int},
 				{"s", print_strings},
 				{NULL, NULL}
 			};
-			for ( j = 0; array[j].t != NULL; j++)
-			{
-				if (format[i + 1] == array[j].array[0])
+			
+			
+		       
+			
+				for ( j = 0; m[j].t != NULL; j++)
 				{
-					array[j].f(valist);
+					if (format  == m[j].t)
+					{
+						m[j].f(valist);
+					}
 				}
-			}
+			
+			
 		}
 	}
 	va_end(valist);
