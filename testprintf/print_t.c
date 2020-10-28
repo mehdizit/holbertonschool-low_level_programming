@@ -1,21 +1,18 @@
 #include "holberton.h"
 #include <stdarg.h>
 #include <stdlib.h>
-void print_c(va_list arg)
+int print_c(va_list arg)
 {
-	int i;
-	char *str;
-	str = va_arg(arg, char *);
-	if ( str == NULL)
-		return;
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		_putchar(str[i]);
-	}
-	return (0);
+	char ch;
+	ch = va_arg(arg, int);
+
+	if ( ch == '\0')
+		return(0);
+	_putchar(ch);
+  	return (1);    
 }
 
-void print_dec(va_list arg)
+int print_dec(va_list arg)
 {
 	int n = va_arg(arg, int);
 	int num;
@@ -54,10 +51,10 @@ void print_dec(va_list arg)
 	}
 	_putchar(last + '0');
 
-	return (0);
+  return (0);     
 }
 
-void print_int(va_list arg)
+int print_int(va_list arg)
 {
 	int n = va_arg(arg, int);
 	int num;
@@ -96,11 +93,11 @@ void print_int(va_list arg)
 	}
 	_putchar(last + '0');
 
-	return (0);
+       return (i);
 }
 	
 
-void print_strings(va_list arg)
+int print_strings(va_list arg)
 {
 	char *str;
 	unsigned int i;
@@ -110,6 +107,6 @@ void print_strings(va_list arg)
 	{
 		_putchar(str[i]);
 	}
-	return (0);
+	return (i);
 }
 	

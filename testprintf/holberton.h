@@ -1,22 +1,22 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 #include <stdarg.h>
-
-
-int _putchar(char c);
-void print_c(va_list arg);
-void print_dec(va_list arg);
-void print_int(va_list arg);
-void print_strings(va_list arg);
-int _printf(const char *format, ...);
-
-
-
+#include <stdio.h>
 typedef struct m
 {
-	char *t;
-	void (*f)(va_list);
+	char t;
+	int (*f)(va_list valist) ;
 } print_t;
+
+int _putchar(char c);
+int print_c(va_list arg);
+int print_dec(va_list arg);
+int print_int(va_list arg);
+int print_strings(va_list arg);
+int _printf(const char *format, ...);
+int (*checkType(char ch))(va_list valist);
+
+
 
 #endif
 

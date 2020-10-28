@@ -6,43 +6,20 @@ int _printf(const char *format, ...)
 {
 	va_list valist;
 	int i;
-
+	int (*result)(va_list valist);
 	
 
 	va_start(valist, format);
 	if (format == NULL)
 		return (0);
 
-	for (i = 0; format[i]; i++)
-		if ((format[i] == '%') && (format[i + 1] == '\0'))
-			return (0);
 	for(i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i] == '%' && format[i + 1] == '%')
-			_putchar('%');
-		else if (format [i] == '%' && format[i + 1] != '%')
+		if (format[i] == '%')
 		{
-			int j;
-			print_t m[] = {
-				{"c", print_c},
-				{"d", print_dec},
-				{"i", print_int},
-				{"s", print_strings},
-				{NULL, NULL}
-			};
-			
-			
-		       
-			
-				for ( j = 0; m[j].t != NULL; j++)
-				{
-					if (format  == m[j].t)
-					{
-						m[j].f(valist);
-					}
-				}
-			
-			
+		
+			result = checkType(format[i + 1]);
+			result(valist);
 		}
 	}
 	va_end(valist);
