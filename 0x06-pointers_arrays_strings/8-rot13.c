@@ -8,22 +8,17 @@
  */
 char *rot13(char *s)
 {
-int i;
+char *str = s, *rot13start = ROT13START, *rot13over = ROT13OVER;
+	int i = 0;
 
-	i = 0;
-	while (s[i] != '\0')
+	for (; *s; s++)
 	{
-		while ((s[i] >= 'a' && s[i] <= 'z') ||
-		       (s[i] >= 'A' && s[i] <= 'Z'))
-		{
-			if ((s[i] >= 'N' && s[i] <= 'Z') ||
-			    (s[i] >= 'n' && s[i] <= 'z'))
-				s[i] -= 13;
-			else
-				s[i] += 13;
-			i++;
-		}
-		i++;
+		for (i = 0; rot13start[i]; i++)
+			if (*s == rot13start[i])
+			{
+				*s = rot13over[i];
+				break;
+			}
 	}
-	return (s);
+	return (str);
 }
