@@ -1,28 +1,29 @@
 #include "holberton.h"
 /**
- **rot13 - rotate with 13 places.
+ *rot13 - function that rotate with 13 places.
  *
- *@start:char
+ *@s:char
  *
  * Return: char.
  */
-char *rot13(char *start)
+char *rot13(char *s)
 {
-	int i, j;
+int i;
 
-	for (j = 0; start[j] != '\0'; j++)
+	i = 0;
+	while (s[i] != '\0')
 	{
-	}
-	for (i = 0; i < j; i++)
-	{
-		if ((*start >= 'a' && *start < 'n') || (*start >= 'A' && *start < 'N'))
+		while ((s[i] >= 'a' && s[i] <= 'z') ||
+		       (s[i] >= 'A' && s[i] <= 'Z'))
 		{
-			*start += 13;
+			if ((s[i] >= 'N' && s[i] <= 'Z') ||
+			    (s[i] >= 'n' && s[i] <= 'z'))
+				s[i] -= 13;
+			else
+				s[i] += 13;
+			i++;
 		}
-		else
-		{
-			*start -= 13;
-		}
+		i++;
 	}
-	return (start);
+	return (s);
 }
