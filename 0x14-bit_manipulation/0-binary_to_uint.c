@@ -3,18 +3,17 @@
 unsigned int binary_to_uint(const char *b)
 {
 	int dec = 0, w = 1;
-	int rem, a;
 	int i = 0;
 
-	while (b[i] != 0)
+	while (b[i] != '\0')
 	{
-		rem = (b[i] - '0') % 10;
-		dec = dec + rem * w;
-		a = (b[i] - '0');
-		a = a / 10;
+		if (b[i] != '0' && b[i] != '1')
+			return (0);
+		
+		dec = dec + ((b[i] - '0') * w);
 		w = w * 2;
 		i++;
 	}
-	return (a);
+	return (dec);
 }
 	
