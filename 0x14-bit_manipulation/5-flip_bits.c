@@ -2,12 +2,13 @@
 
 int count_set_bit(char number)
 {
-	int count = 0;
+	int count, i;
 
-	while (number)
+	while (number > i)
 	{
 		count = count + (number & 1);
 		number = number >> 1;
+		i++;
 	}
 	return (number);
 }
