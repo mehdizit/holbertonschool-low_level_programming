@@ -9,5 +9,6 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	char bit = ((n >> index) & 1);
+
 	return (bit);
 }
