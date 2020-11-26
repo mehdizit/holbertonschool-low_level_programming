@@ -1,64 +1,50 @@
 #include "holberton.h"
+#include <stdio.h>
+#define BUFSIZE 1024
 /**
- * main - copies contents of one file to another
- * @ac: num of arguments, must be exactly 3
- * @av: file names
- * Return: 0
+ * main - copies a file
+ *
+ * @argc: argument cont
+ * @argv: arguments
+ * Return: Returns 97 for syntax error, 98 for read error, 99 write, 100 close
  */
-int main(int ac, char **av)
+int main(int argc, char *argv[])
 {
-	char buf[1024];
-	int i;
-	int fd, fd2;
+	int file_from, file_to, readval, retval;
+	char buf[BUFSIZE];
 
-	if (ac != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
-
-	fd = open(av[1], O_RDONLY);
-	if (fd == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-		exit(98);
-	}
-	fd2 = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (fd2 == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-		exit(99);
-	}
-
-	while ((i = read(fd, buf, 1024)) > 0)
-	{
-		i = write(fd2, buf, i);
-
-		if (i == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+	retval = 1;
+	if (argc != 3)
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"),
+			exit(97);
+	if (argv[1] == NULL)
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),
+			exit(98);
+	if (argv[2] == NULL)
+		dprintf(STDERR_FILENO, "Erro\r: Can't write to file %s\n", argv[2]),
 			exit(99);
-		}
-	}
-	if (i == -1)
+	file_from = open(argv[1], O_RDONLY);
+	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC,
+		       S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	readval = read(file_from, buf, BUFSIZE);
+	if (readval == -1)
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),
+			exit(98);
+	while (readval != 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-		exit(98);
+		retval = write(file_to, buf, readval);
+		if (retval == -1 || retval != readval)
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+		readval = read(file_from, buf, BUFSIZE);
+		if (readval == -1)
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),
+				exit(98);
 	}
-
-	fd = close(fd);
-	if (fd == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		exit(100);
-	}
-
-	fd2 = close(fd2);
-	if (fd2 == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
-		exit(100);
-	}
-
+	retval = close(file_from);
+	if (retval == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
+	retval = close(file_to);
+	if (retval == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to), exit(100);
 	return (0);
 }
