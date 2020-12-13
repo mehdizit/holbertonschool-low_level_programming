@@ -6,7 +6,7 @@
 /**
  * struct dlistint_s - doubly linked list
  * @n: integer
- * @prev: points to the previous node
+ * @prev: points to the previous
  * @next: points to the next node
  *
  * Description: doubly linked list node structure
