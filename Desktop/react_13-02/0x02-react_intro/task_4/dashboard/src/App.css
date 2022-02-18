@@ -1,0 +1,47 @@
+.App {
+  font-family:Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
+.App-header img {
+  height: 50vmin;
+ 
+}
+
+
+
+.App-header {
+  position: relative;
+  width: 100%;
+  border-bottom: .8rem solid #e1003c;
+  align-items: center;
+  display: flex;
+  color: #e1003c;
+  margin-bottom: 3.5rem;
+}
+
+.App-header h1 {
+  font-size: 2.5rem;
+  margin-bottom:0;
+  font-weight: bold;
+}
+.App-body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.App-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  border-top: .3rem solid #e1003c;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
