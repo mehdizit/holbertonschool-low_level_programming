@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/mehdizit/holbertonschool-web_react/static/css/main.8ee50646.css",
+    "main.js": "/mehdizit/holbertonschool-web_react/static/js/main.1f5fadd5.js",
+    "static/js/787.545aecf5.chunk.js": "/mehdizit/holbertonschool-web_react/static/js/787.545aecf5.chunk.js",
+    "static/media/holberton_logo.jpg": "/mehdizit/holbertonschool-web_react/static/media/holberton_logo.24bab5d633e36ca8d17e.jpg",
+    "index.html": "/mehdizit/holbertonschool-web_react/index.html",
+    "main.8ee50646.css.map": "/mehdizit/holbertonschool-web_react/static/css/main.8ee50646.css.map",
+    "main.1f5fadd5.js.map": "/mehdizit/holbertonschool-web_react/static/js/main.1f5fadd5.js.map",
+    "787.545aecf5.chunk.js.map": "/mehdizit/holbertonschool-web_react/static/js/787.545aecf5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ee50646.css",
+    "static/js/main.1f5fadd5.js"
+  ]
+}
